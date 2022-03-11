@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ImagenesMercadoLibre.Views.Me.MeView">
+    <StackLayout Spacing="12">
+        <Entry x:Name="txt_nickname" Text="{Binding nickname}" HeightRequest="40" BackgroundColor="White" Placeholder="nickname" HorizontalOptions="FillAndExpand"/>
+        <Entry  x:Name="txt_first_name" Keyboard="Telephone" Text="{Binding first_name}" BackgroundColor="White" HeightRequest="40" Placeholder="first_name" HorizontalOptions="FillAndExpand"/>
+        <StackLayout Orientation="Horizontal">
+            <Entry x:Name="txt_last_name" Text="{Binding last_name}" HeightRequest="40" BackgroundColor="White" Placeholder="last_name" HorizontalOptions="FillAndExpand"/>
+            <Entry x:Name="txt_gender" Text="{Binding gender}" HeightRequest="40" BackgroundColor="White" Placeholder="gender" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        <DatePicker x:Name="txt_registration_date" Date="{Binding registration_date}" BackgroundColor="White" HeightRequest="40" HorizontalOptions="FillAndExpand"/>
+        <Entry x:Name="txtAddress" Text="{Binding Address}" BackgroundColor="White"  HeightRequest="40" Placeholder="Address"  HorizontalOptions="FillAndExpand"/>
+    </StackLayout>
+</ContentView>  

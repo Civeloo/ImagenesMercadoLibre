@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:ImagenesMercadoLibre.Views.Me"
+             x:Class="ImagenesMercadoLibre.Views.Me.AddMe" >
+    <StackLayout Padding="20" Spacing="12">
+        <local:MeView />
+        <Button x:Name="SubmitButton" Command="{Binding AddMeCommand}" BorderRadius="0" Text="Save Me" FontAttributes="Bold" TextColor="White" BackgroundColor="#5989B5"/>
+        <Label Text="View All Mes" IsVisible="{Binding IsViewAll}" x:Name="ViewLbl" TextColor="Black" HorizontalOptions="EndAndExpand" FontSize="15">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding ViewAllMesCommand}" NumberOfTapsRequired="1" />
+            </Label.GestureRecognizers>
+        </Label>
+    </StackLayout>
+</ContentPage>  

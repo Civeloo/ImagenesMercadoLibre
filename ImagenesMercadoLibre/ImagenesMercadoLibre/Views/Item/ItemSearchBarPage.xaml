@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:viewmodels="clr-namespace:ImagenesMercadoLibre.ViewModels.Item"                           
+             Padding="10"
+             Title="{Binding Title}"
+             x:Class="ImagenesMercadoLibre.Views.Item.ItemSearchBarPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <SearchBar x:Name="searchBar"
+                   HorizontalOptions="Fill"
+                   VerticalOptions="CenterAndExpand"
+                   Placeholder="Buscar ..."
+                   SearchCommand="{Binding PerformSearch}" 
+                   SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"/>
+            <Label Text="{Binding Info}"
+               HorizontalOptions="Fill"
+               VerticalOptions="CenterAndExpand" />
+            <ActivityIndicator IsRunning="{Binding IsBusy}" />
+            <ListView x:Name="ItemListView" HasUnevenRows="true" Grid.Row="1" SeparatorColor="Black" ItemsSource="{Binding ItemList}"  
+                SelectedItem="{Binding SelectedItem, Mode=TwoWay}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid  Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding seller_sku}" Grid.Column="0" Font="20" TextColor="Black" />
+                            <Label Text="{Binding title}"  Grid.Column="1" Font="20" TextColor="Black" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+            <Button IsVisible="False" Text="Volver" Command="{Binding NavigateCommand}" />
+        </StackLayout>
+        </ContentPage.Content>
+</ContentPage>

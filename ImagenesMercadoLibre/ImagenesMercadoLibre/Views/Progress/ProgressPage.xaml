@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage  
+    xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodels="clr-namespace:ImagenesMercadoLibre.ViewModels.Progress"  
+             mc:Ignorable="d"
+             Padding="10"              
+             Title="{Binding Title}"
+             x:Class="ImagenesMercadoLibre.Views.Progress.ProgressPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ActivityIndicator IsRunning="{Binding IsBusy}" />
+            <Grid>
+                <Label Text="{Binding LoadingProgress}" Grid.Column="0" Font="20"/>
+                <Label Text=" de " Grid.Column="1" Font="20"/>
+                <Label Text="{Binding TotalProgress}" Grid.Column="2" Font="20"/>
+            </Grid>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

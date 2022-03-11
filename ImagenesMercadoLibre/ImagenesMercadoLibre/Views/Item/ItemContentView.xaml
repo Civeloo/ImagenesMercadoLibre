@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="ImagenesMercadoLibre.Views.Item.ItemContentView">
+  <ContentView.Content>
+      <StackLayout>
+            <Entry Text="{Binding id}"/>
+            <Entry Text="{Binding  site_id}"/>
+            <Entry Text="{Binding  title}"/>
+            <!--<Entry Text="{Binding subtitle}"/>-->
+            <Entry Text="{Binding seller_id}"/>
+            <Entry Text="{Binding  category_id}"/>
+            <!--<Entry Text="{Binding official_store_id}"/>-->
+            <Entry Text="{Binding price}"/>
+            <Entry Text="{Binding base_price}"/>
+            <!--<Entry Text="{Binding original_price}"/>-->
+            <!--<Entry Text="{Binding inventory_id}"/>-->
+            <Entry Text="{Binding  currency_id}"/>
+            <Entry Text="{Binding initial_quantity}"/>
+            <Entry Text="{Binding available_quantity}"/>
+            <Entry Text="{Binding sold_quantity}"/>
+            <!--<Entry Text="{Binding <SaleTerm> sale_terms}"/>-->
+            <Entry Text="{Binding  buying_mode}"/>
+            <Entry Text="{Binding  listing_type_id}"/>
+            <Entry Text="{Binding  start_time}"/>
+            <Entry Text="{Binding  stop_time}"/>
+            <Entry Text="{Binding  end_time}"/>
+            <Entry Text="{Binding  expiration_time}"/>
+            <Entry Text="{Binding  condition}"/>
+            <Entry Text="{Binding  permalink}"/>
+            <Entry Text="{Binding  thumbnail}"/>
+            <Entry Text="{Binding  secure_thumbnail}"/>
+            <!--<Entry Text="{Binding <Picture> pictures}"/>-->
+            <Entry Text="{Binding  video_id}"/>
+            <!--<Entry Text="{Binding <Description> descriptions}"/>-->
+            <Entry Text="{Binding  accepts_mercadopago}"/>
+            <!--<Entry Text="{Binding <object> non_mercado_pago_payment_methods}"/>-->
+            <!--public Shipping shipping}"/>-->
+            <Entry Text="{Binding  international_delivery_mode}"/>
+            <!--public SellerAddress seller_address}"/>-->
+            <!--<Entry Text="{Binding seller_contact}"/>-->
+            <!--public Location location}"/>-->
+            <!--public Geolocation geolocation}"/>-->
+            <!--<Entry Text="{Binding <object> coverage_areas}"/>-->
+            <!--<Entry Text="{Binding <Attribute> attributes}"/>-->
+            <!--<Entry Text="{Binding <object> warnings}"/>-->
+            <Entry Text="{Binding  listing_source}"/>
+            <!--<Entry Text="{Binding <object> variations}"/>-->
+            <Entry Text="{Binding  status}"/>
+            <!--<Entry Text="{Binding <object> sub_status}"/>-->
+            <!--<Entry Text="{Binding <string> tags}"/>-->
+            <!--<Entry Text="{Binding warranty}"/>-->
+            <!--<Entry Text="{Binding catalog_product_id}"/>-->
+            <Entry Text="{Binding  domain_id}"/>
+            <!--<Entry Text="{Binding seller_custom_field}"/>-->
+            <!--<Entry Text="{Binding parent_item_id}"/>-->
+            <!--<Entry Text="{Binding differential_pricing}"/>-->
+            <!--<Entry Text="{Binding <object> deal_ids}"/>-->
+            <Entry Text="{Binding  automatic_relist}"/>
+            <Entry Text="{Binding  date_created}"/>
+            <Entry Text="{Binding  last_updated}"/>
+            <Entry Text="{Binding  health}"/>
+            <Entry Text="{Binding  catalog_listing}"/>
+        </StackLayout>
+  </ContentView.Content>
+</ContentView>
